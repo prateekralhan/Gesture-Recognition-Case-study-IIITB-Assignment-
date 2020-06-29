@@ -26,7 +26,8 @@ Each video is a sequence of 30 frames (or images).
 Run ***pip install -r requirements.txt*** to install all the dependencies.
 
 ### Dataset:
-You can download the dataset from [here.]( https://drive.google.com/uc?id=1ehyrYBQ5rbQQe6yL4XbLWe3FMvuVUGiL) It looks like this:
+You can download the dataset from [here.](https://drive.google.com/uc?id=1ehyrYBQ5rbQQe6yL4XbLWe3FMvuVUGiL)
+The training data consists of a few hundred videos categorised into one of the five classes. Each video (typically 2-3 seconds long) is divided into a sequence of 30 frames(images). These videos have been recorded by various people performing one of the five gestures in front of a webcam - similar to what the smart TV will use.It looks like this:
 ![dataset](https://user-images.githubusercontent.com/29462447/86066087-d03cf680-ba8e-11ea-91f5-960b5f522a39.png)
 
 ### Results:

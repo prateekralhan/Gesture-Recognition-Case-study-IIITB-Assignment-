@@ -40,3 +40,6 @@ The training data consists of a few hundred videos categorised into one of the f
 
 I choose CNN+LSTM based model as the final choice due to fairly decent accuracy considering the type of data as well the no. of parameters as I wanted my model to be light weight in nature.
 
+### Web Application:
+Live webapp can be found [here.](https://gesture-recognition-webapp.herokuapp.com/)
+

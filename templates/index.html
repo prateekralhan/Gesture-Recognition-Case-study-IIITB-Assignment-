@@ -2,16 +2,33 @@
 <style>
 h2 {text-align: center;}
 p {text-align: center;}
+.button {
+background-color: #1A1A1D;
+text-align: center;
+color: lightgreen;
+margin: 10;
+padding: 10px;
+}
 </style>
-<h2>Gesture Recognition</h2>
-
+<br>
+<br>
+<h2>✋ 👐 ☝️ 👇 👈 👉 🙌 🙏 👆 👏</h2>
+<h2>Please Select all the Images of the folder!! 😊</h2>
+<br>
+<br>
 <div>
+    <center>
+        <hr>
+        <br>
     <form align="center" id="upload-file" method="post" enctype="multipart/form-data">
         <label for="imageUpload" class="upload-label">
-            Select
+          👉 Browse 👈
         </label>
         <input type="file" name="file[]" id="imageUpload" multiple="">
     </form>
+        <br>
+        <hr>
+    </center>
 
     <div align="center" class="image-section" style="display:none;">
         <div class="img-preview">
@@ -19,7 +36,7 @@ p {text-align: center;}
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            <button type="button" class="button" id="btn-predict">Predict!</button>
         </div>
     </div>
 

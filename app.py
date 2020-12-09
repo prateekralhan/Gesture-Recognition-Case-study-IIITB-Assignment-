@@ -21,7 +21,7 @@ from gevent.pywsgi import WSGIServer
 app = Flask(__name__)
 
 # Model saved with Keras model.save()
-MODEL_PATH = '/app/models/model-00020-0.19649-0.93514-0.45695-0.85000.h5'
+MODEL_PATH = 'models/final_model.h5'
 
 gesture_class = ["Left Swipe", "Right Swipe", "Stop", "Thumbs Down", "Thumbs Up"]
 
@@ -30,15 +30,15 @@ def generator(folder_path):
     img_idx = [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 27, 28, 29]
     while True:
 
-        batch_data = np.zeros((1, 18, 84, 84, 3))
+        batch_data = np.zeros((1, 18, 120, 120, 3))
         batch_labels = np.zeros((1, 5))
         imgs = os.listdir(folder_path)
         for idx, item in enumerate(img_idx):
             image = imread(folder_path + '/' + imgs[item]).astype(np.float32)
             if image.shape[1] == 160:
-                image = imresize(image[:, 20:140, :], (84, 84)).astype(np.float32)
+                image = imresize(image[:, 20:140, :], (120, 120)).astype(np.float32)
             else:
-                image = imresize(image, (84, 84)).astype(np.float32)
+                image = imresize(image, (120, 120)).astype(np.float32)
 
             batch_data[0, idx, :, :, 0] = image[:, :, 0] - 104
             batch_data[0, idx, :, :, 1] = image[:, :, 1] - 117

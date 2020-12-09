@@ -4,18 +4,21 @@ import os
 import sys
 import datetime
 import glob
-
+import imageio
 
 from keras.models import load_model, Model
 import numpy as np
 from scipy.misc import imread, imresize
-
+from skimage import transform
 
 # Flask utils
 import flask
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
+
+import warnings
+warnings.filterwarnings("ignore")
 
 # Define a flask app
 app = Flask(__name__)
@@ -34,11 +37,11 @@ def generator(folder_path):
         batch_labels = np.zeros((1, 5))
         imgs = os.listdir(folder_path)
         for idx, item in enumerate(img_idx):
-            image = imread(folder_path + '/' + imgs[item]).astype(np.float32)
+            image = imageio.imread(folder_path + '/' + imgs[item]).astype(np.float32)
             if image.shape[1] == 160:
-                image = imresize(image[:, 20:140, :], (120, 120)).astype(np.float32)
+                image = transform.resize(image[:, 20:140, :], (120, 120)).astype(np.float32)
             else:
-                image = imresize(image, (120, 120)).astype(np.float32)
+                image = transform.resize(image, (120, 120)).astype(np.float32)
 
             batch_data[0, idx, :, :, 0] = image[:, :, 0] - 104
             batch_data[0, idx, :, :, 1] = image[:, :, 1] - 117

@@ -7,13 +7,24 @@ Developed by:
 ### Web Application:
 Live webapp can be found [here.](https://gesture-recognition-webapp.herokuapp.com/)
 
-![1](https://user-images.githubusercontent.com/29462447/101627829-efc84a00-3a44-11eb-9228-a97dd7b356d5.png)
+<kbd>
+<img src="https://user-images.githubusercontent.com/29462447/101627829-efc84a00-3a44-11eb-9228-a97dd7b356d5.png" data-canonical-src="https://user-images.githubusercontent.com/29462447/101627829-efc84a00-3a44-11eb-9228-a97dd7b356d5.png"/> 
+</kbd>
 
-![2](https://user-images.githubusercontent.com/29462447/101627832-f060e080-3a44-11eb-909d-39ae5b8657a8.png)
+&nbsp;
+<kbd>
+<img src="https://user-images.githubusercontent.com/29462447/101627832-f060e080-3a44-11eb-909d-39ae5b8657a8.png" data-canonical-src="https://user-images.githubusercontent.com/29462447/101627832-f060e080-3a44-11eb-909d-39ae5b8657a8.png"/> 
+</kbd>
 
-![3](https://user-images.githubusercontent.com/29462447/101627816-ec34c300-3a44-11eb-92ff-40b6b013d912.png)
+&nbsp;
+<kbd>
+<img src="https://user-images.githubusercontent.com/29462447/101627816-ec34c300-3a44-11eb-92ff-40b6b013d912.png" data-canonical-src="https://user-images.githubusercontent.com/29462447/101627816-ec34c300-3a44-11eb-92ff-40b6b013d912.png"/> 
+</kbd>
 
-![4](https://user-images.githubusercontent.com/29462447/101627820-edfe8680-3a44-11eb-9ac5-43d17f13a7ab.png)
+&nbsp;
+<kbd>
+<img src="https://user-images.githubusercontent.com/29462447/101627820-edfe8680-3a44-11eb-9ac5-43d17f13a7ab.png" data-canonical-src="https://user-images.githubusercontent.com/29462447/101627820-edfe8680-3a44-11eb-9ac5-43d17f13a7ab.png"/> 
+</kbd>
 
 ### Running the Dockerized App
 1. Ensure you have Docker Installed and Setup in your OS (Windows/Mac/Linux). For detailed Instructions, please refer [this.](https://docs.docker.com/engine/install/)

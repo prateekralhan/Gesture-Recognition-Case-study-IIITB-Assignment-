@@ -4,42 +4,30 @@ Developed by:
 1. [Deepa Kushwaha](https://github.com/deepakush)
 2. [Prateek Ralhan](https://github.com/prateekralhan)
 
-### Problem Statement
-Imagine you are working as a data scientist at a home electronics company which manufactures state of the art smart televisions. You want to develop a cool feature in the smart-TV that can recognise five different gestures performed by the user which will help users control the TV without using a remote.
-
-The gestures are continuously monitored by the webcam mounted on the TV. Each gesture corresponds to a specific command:
- 
-| Gesture | Corresponding Action |
-| --- | --- | 
-| Thumbs Up | Increase the volume. |
-| Thumbs Down | Decrease the volume. |
-| Left Swipe | 'Jump' backwards 10 seconds. |
-| Right Swipe | 'Jump' forward 10 seconds. |
-| Stop | Pause the movie. |
-
-Each video is a sequence of 30 frames (or images).
-
-### Objectives:
-1. **Generator**:  The generator should be able to take a batch of videos as input without any error. Steps like cropping, resizing and normalization should be performed successfully.
-
-2. **Model**: Develop a model that is able to train without any errors which will be judged on the total number of parameters (as the inference(prediction) time should be less) and the accuracy achieved. As suggested by Snehansu, start training on a small amount of data and then proceed further.
-
-3. **Write up**: This should contain the detailed procedure followed in choosing the final model. The write up should start with the reason for choosing the base model, then highlight the reasons and metrics taken into consideration to modify and experiment to arrive at the final model.
-
-### Installation:
-Run ***pip install -r requirements.txt*** to install all the dependencies.
-
-### Dataset:
-You can download the dataset from [here.](https://drive.google.com/uc?id=1ehyrYBQ5rbQQe6yL4XbLWe3FMvuVUGiL)
-The training data consists of a few hundred videos categorised into one of the five classes. Each video (typically 2-3 seconds long) is divided into a sequence of 30 frames(images). These videos have been recorded by various people performing one of the five gestures in front of a webcam - similar to what the smart TV will use.It looks like this:
-![dataset](https://user-images.githubusercontent.com/29462447/86066087-d03cf680-ba8e-11ea-91f5-960b5f522a39.png)
-
-### Results:
-
-![observations](https://user-images.githubusercontent.com/29462447/86066095-d501aa80-ba8e-11ea-82d8-4681e20e310e.png)
-
-I choose CNN+LSTM based model as the final choice due to fairly decent accuracy considering the type of data as well the no. of parameters as I wanted my model to be light weight in nature.
-
 ### Web Application:
 Live webapp can be found [here.](https://gesture-recognition-webapp.herokuapp.com/)
 
+![1](https://user-images.githubusercontent.com/29462447/101627829-efc84a00-3a44-11eb-9228-a97dd7b356d5.png)
+
+![2](https://user-images.githubusercontent.com/29462447/101627832-f060e080-3a44-11eb-909d-39ae5b8657a8.png)
+
+![3](https://user-images.githubusercontent.com/29462447/101627816-ec34c300-3a44-11eb-92ff-40b6b013d912.png)
+
+![4](https://user-images.githubusercontent.com/29462447/101627820-edfe8680-3a44-11eb-9ac5-43d17f13a7ab.png)
+
+### Running the Dockerized App
+1. Ensure you have Docker Installed and Setup in your OS (Windows/Mac/Linux). For detailed Instructions, please refer [this.](https://docs.docker.com/engine/install/)
+2. Navigate to the folder where you have cloned this repository ( where the ***Dockerfile*** is present ).
+3. Build the Docker Image (don't forget the dot!! :smile: ): 
+```
+docker build --tag gesture_recognition_app .
+```
+4. Run the docker:
+```
+docker run --publish 8000:8080 --detach --name ge_re_app gesture_recognition_app
+```
+
+This will launch the dockerized app. Navigate to ***localhost:8000*** in your browser to have a look at your application. You can check the status of your all available running dockers by:
+```
+docker ps
+```

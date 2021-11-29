@@ -1,4 +1,5 @@
-# Gesture Recognition Case study IIITB Assignment
+# Gesture Recognition Case study IIITB Assignment [![](https://img.shields.io/badge/Prateek-Ralhan-brightgreen.svg?colorB=ff0000)](https://prateekralhan.github.io/)
+
 
 Developed by:
 1. [Deepa Kushwaha](https://github.com/deepakush)
